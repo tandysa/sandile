@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detection Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="topbar">
+        <div>
+          <h1>Detection Dashboard</h1>
+          <p class="subtitle">Student project log monitor</p>
+        </div>
+        <button id="exportCsvBtn" class="button" type="button">Export CSV</button>
+      </header>
+
+      <section class="status-grid" aria-label="Status summary">
+        <article class="card">
+          <h2>Total Logs</h2>
+          <p id="totalLogs" class="value">0</p>
+        </article>
+        <article class="card">
+          <h2>Latest Detection</h2>
+          <p id="latestDetection" class="value">No data yet</p>
+        </article>
+        <article class="card">
+          <h2>Last Updated</h2>
+          <p id="lastUpdated" class="value">--</p>
+        </article>
+      </section>
+
+      <section class="table-wrap" aria-label="Detection log records">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Label</th>
+              <th>Status</th>
+              <th>Confidence</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody id="logsBody">
+            <tr>
+              <td colspan="5" class="empty">Waiting for Firebase data...</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
